@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div class="container">
+
+            <h1>password generater</h1>
+            <!-- password dispaly section -->
+            <div class="display-container">
+                <input type="text" class="display" placeholder="Password" readonly data-passwordDisplay>
+                <button class="copyBtn" data-copy>
+                    <span class="toolKit" data_copyMsg></span>
+                    <img src="copy.svg" alt="copy" width="23" height="23">
+                </button>
+            </div>
+
+            <div class="input_container">
+
+                <!-- password length section -->
+                <div class="length_container">
+                    <p>Password Length</p>
+                    <p data_length>0</p>
+                </div>
+
+                <input type="range" min="0" max="20" class="slider" value="10" step="1" data_length_slider>
+
+                <!-- cheak box section  -->
+                <div>
+
+                    <div class="check">
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Include uppercase letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="lowercase">
+                        <label for="lowercase">Include lowercase letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="number">
+                        <label for="number">Include numbers letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Include symbols letters</label>
+                    </div>
+                </div>
+                <!--  strenght section -->
+                <div class="strenght">
+                    <p>Strenght</p>
+                    <div data_indicator></div>
+                </div>
+                <!-- generate button -->
+                <button class="Generate">Generate button</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
